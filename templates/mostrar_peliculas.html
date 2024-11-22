@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartelera de Películas</title>
+</head>
+<body>
+    <h1>Cartelera de Películas</h1>
+    <ul>
+        {% for pelicula in peliculas %}
+        <li>
+            <h2>{{ pelicula.titulo }}</h2>
+            <p>{{ pelicula.descripcion }}</p>
+            <p><strong>Horario:</strong> {{ pelicula.horario|date:"d M Y H:i" }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
